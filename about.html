@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Mic Masters Academy</title>
+  <meta name="description" content="Learn about Mic Masters Academy, founder Mahesh Ushir, and the mission to build confident communicators.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .founder-card {
+      padding: var(--space-xl);
+      border-left: 5px solid var(--color-accent);
+      border-radius: var(--radius-lg);
+      background: var(--color-light);
+      box-shadow: var(--shadow-md);
+    }
+
+    .founder-image {
+      aspect-ratio: 3 / 4;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-lg);
+    }
+
+    @media (max-width: 1000px) {
+      .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-nav">
+      <a href="index.html" class="nav-brand" aria-label="Mic Masters Academy home">
+        <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+      </a>
+      <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Free Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container fade-up">
+      <h1>Our Story</h1>
+      <p>Building leaders through practical communication training.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-padding">
+      <div class="container text-center fade-up">
+        <h2 class="section-title">The Academy Mission</h2>
+        <p class="lead mx-auto">Mic Masters Academy equips students and young professionals with the clarity, confidence, and presence to express ideas powerfully. We turn anxious speakers into prepared communicators through practice, feedback, and stage-ready methods.</p>
+      </div>
+    </section>
+
+    <section class="section-padding bg-cream">
+      <div class="container split-grid">
+        <div class="fade-right">
+          <img src="assets/images/mahesh_instructor.jpg" alt="Mahesh Ushir" class="founder-image">
+        </div>
+        <div class="founder-card fade-left">
+          <h2 class="section-title left-align">Meet Mahesh Ushir</h2>
+          <p><strong>Founder and Head Coach</strong></p>
+          <ul class="feature-list">
+            <li><i class="fas fa-trophy" aria-hidden="true"></i> <span><strong>200+ awards</strong> at national and state-level elocution and debate competitions.</span></li>
+            <li><i class="fas fa-globe" aria-hidden="true"></i> <span><strong>Vice Curator</strong> at Global Shapers Community, PCMC Hub.</span></li>
+            <li><i class="fas fa-users-cog" aria-hidden="true"></i> <span><strong>Youth Advisor</strong> with Global Opportunity Youth Network.</span></li>
+            <li><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> <span><strong>Mentor</strong> for 50+ students across 3 batches and 15+ guest lectures.</span></li>
+            <li><i class="fas fa-user-graduate" aria-hidden="true"></i> <span><strong>Computer Science graduate</strong> with a practical, student-first coaching style.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-alt">
+      <div class="container">
+        <div class="text-center fade-up">
+          <h2 class="section-title">Our Core Values</h2>
+        </div>
+        <div class="values-grid">
+          <article class="card fade-up delay-100">
+            <div class="card-icon"><i class="fas fa-hammer" aria-hidden="true"></i></div>
+            <h3 class="card-title">Practical Learning</h3>
+            <p class="card-body">Students learn by speaking, receiving feedback, and trying again with better tools.</p>
+          </article>
+          <article class="card fade-up delay-200">
+            <div class="card-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
+            <h3 class="card-title">Real Feedback</h3>
+            <p class="card-body">Feedback is direct, actionable, and specific to each student's current level.</p>
+          </article>
+          <article class="card fade-up delay-300">
+            <div class="card-icon"><i class="fas fa-fist-raised" aria-hidden="true"></i></div>
+            <h3 class="card-title">Confidence Building</h3>
+            <p class="card-body">Stage fear reduces when students are trained through repeatable speaking systems.</p>
+          </article>
+          <article class="card fade-up delay-400">
+            <div class="card-icon"><i class="fas fa-hands-helping" aria-hidden="true"></i></div>
+            <h3 class="card-title">Mentorship</h3>
+            <p class="card-body">The academy supports students beyond the course through guidance and encouragement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+          <p>Find Your Voice. Command Every Room.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pune, Maharashtra, India</li>
+            <li><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/919921362708">+91 99213 62708</a></li>
+            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:maheshushir583@gmail.com">maheshushir583@gmail.com</a></li>
+            <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://instagram.com/micmasters_with_mahesh" target="_blank" rel="noopener">@micmasters_with_mahesh</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Mic Masters Academy of Communication. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919921362708" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with Mic Masters Academy on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <script src="js/main.js"></script>
+</body>
+</html>

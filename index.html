@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mic Masters Academy | Communications and Soft Skills Training</title>
+  <meta name="description" content="Mic Masters Academy helps students and young professionals build communication, soft skills, public speaking, interview, and leadership skills.">
+  <meta name="keywords" content="communications and soft skills academy, communication skills training, public speaking course, interview skills, leadership development">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: var(--color-light);
+      background:
+        linear-gradient(135deg, rgba(8, 11, 20, 0.98) 0%, rgba(16, 27, 52, 0.96) 54%, rgba(139, 32, 40, 0.7) 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 74% 44%, rgba(210, 170, 60, 0.16), transparent 18rem),
+        radial-gradient(circle at 92% 70%, rgba(139, 32, 40, 0.24), transparent 22rem);
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      width: min(90%, 1200px);
+      margin: 0 auto;
+      padding: 160px 0 72px;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      margin-bottom: 1rem;
+      color: var(--color-accent);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      max-width: 760px;
+      color: var(--color-light);
+      font-size: clamp(3rem, 8vw, 5.6rem);
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      max-width: 650px;
+      margin-bottom: var(--space-lg);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-portrait {
+      position: relative;
+      width: min(100%, 420px);
+      aspect-ratio: 1;
+      justify-self: end;
+      overflow: hidden;
+      border: 8px solid rgba(210, 170, 60, 0.86);
+      border-radius: 50%;
+      box-shadow: var(--shadow-lg);
+      background:
+        linear-gradient(135deg, rgba(210, 170, 60, 0.26), rgba(255, 255, 255, 0.08)),
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-portrait::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      z-index: 1;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-portrait::after {
+      content: "";
+      position: absolute;
+      inset: auto 8% 3% 8%;
+      height: 18%;
+      border-radius: 50%;
+      background: linear-gradient(180deg, transparent, rgba(8, 11, 20, 0.54));
+      pointer-events: none;
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+    }
+
+    .stats-section {
+      position: relative;
+      z-index: 2;
+      background: var(--color-accent);
+      color: var(--color-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 1.6rem 0;
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .founder-photo {
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      object-fit: cover;
+    }
+
+    .quote-panel {
+      padding: var(--space-lg);
+      border-left: 4px solid var(--color-accent);
+      background: var(--color-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      font-style: italic;
+    }
+
+    .cta-section {
+      background: var(--gradient-primary);
+      color: var(--color-light);
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      color: var(--color-light);
+      font-size: clamp(2.2rem, 5vw, 3.3rem);
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.15rem;
+    }
+
+    @media (max-width: 1100px) {
+      .offerings-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero::before {
+        background:
+          radial-gradient(circle at 70% 42%, rgba(210, 170, 60, 0.14), transparent 15rem),
+          radial-gradient(circle at 96% 72%, rgba(139, 32, 40, 0.24), transparent 18rem);
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        padding-top: 148px;
+      }
+
+      .hero-portrait {
+        width: min(82vw, 360px);
+        justify-self: center;
+      }
+
+      .offerings-grid,
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-content {
+        padding-top: 132px;
+      }
+
+      .hero-portrait {
+        width: min(86vw, 320px);
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-nav">
+      <a href="index.html" class="nav-brand" aria-label="Mic Masters Academy home">
+        <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+      </a>
+      <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Free Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-copy">
+        <span class="hero-kicker fade-up delay-100">Communications and Soft Skills Academy</span>
+        <h1 class="hero-title fade-up delay-200">Mic Masters Academy</h1>
+        <p class="hero-subtitle fade-up delay-300">Find your voice, command every room, and grow into the kind of communicator people remember.</p>
+        <div class="hero-buttons fade-up delay-400">
+          <a href="courses.html" class="btn btn-primary"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Explore Courses</a>
+          <a href="contact.html" class="btn btn-outline-white"><i class="fab fa-whatsapp" aria-hidden="true"></i> Book Free Demo</a>
+        </div>
+      </div>
+      <div class="hero-portrait fade-left delay-200" aria-hidden="true">
+        <img src="assets/images/mahesh_instructor.jpg" alt="">
+      </div>
+    </div>
+  </header>
+
+  <section class="stats-section" id="stats" aria-label="Mic Masters Academy highlights">
+    <div class="container stats-grid">
+      <div class="stat-item fade-in delay-100">
+        <span class="stat-number" data-target="200" data-plus="true">0</span>
+        <span class="stat-label">Awards Won</span>
+      </div>
+      <div class="stat-item fade-in delay-200">
+        <span class="stat-number" data-target="50" data-plus="true">0</span>
+        <span class="stat-label">Students Trained</span>
+      </div>
+      <div class="stat-item fade-in delay-300">
+        <span class="stat-number" data-target="3">0</span>
+        <span class="stat-label">Batches Completed</span>
+      </div>
+      <div class="stat-item fade-in delay-400">
+        <span class="stat-number">15-25</span>
+        <span class="stat-label">Age Group</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section-padding bg-cream">
+      <div class="container">
+        <div class="text-center fade-up">
+          <h2 class="section-title">Programs Designed for Growth</h2>
+          <p class="lead mx-auto">Choose structured online training, hosted intensive practice, one-to-one personal coaching, or an institution-ready workshop built around real speaking outcomes.</p>
+        </div>
+
+        <div class="offerings-grid">
+          <article class="card fade-up delay-100">
+            <div class="card-icon"><i class="fas fa-laptop-house" aria-hidden="true"></i></div>
+            <h3 class="card-title">15-Day Online Course</h3>
+            <p class="card-body">Daily public speaking, debate, storytelling, interview, and body-language modules with live feedback.</p>
+            <a href="courses.html#online" class="btn btn-outline">Learn More</a>
+          </article>
+
+          <article class="card fade-up delay-200">
+            <div class="card-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+            <h3 class="card-title">5-Day Intensive</h3>
+            <p class="card-body">In-person practice for students who want quick improvement through stage time, peer practice, and correction.</p>
+            <a href="courses.html#intensive" class="btn btn-outline">Check Schedule</a>
+          </article>
+
+          <article class="card fade-up delay-300">
+            <div class="card-icon"><i class="fas fa-user-check" aria-hidden="true"></i></div>
+            <h3 class="card-title">Personal Training</h3>
+            <p class="card-body">One-to-one coaching customized to your speaking, confidence, interview, or presentation goals. Weekend slots available.</p>
+            <a href="courses.html#personal-training" class="btn btn-outline">Plan Session</a>
+          </article>
+
+          <article class="card fade-up delay-400">
+            <div class="card-icon"><i class="fas fa-school" aria-hidden="true"></i></div>
+            <h3 class="card-title">Institutional Workshops</h3>
+            <p class="card-body">High-energy 3-4 hour workshops for schools, colleges, clubs, and placement preparation teams.</p>
+            <a href="workshops.html" class="btn btn-outline">For Institutions</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container split-grid">
+        <div class="fade-right">
+          <img src="assets/images/mahesh_instructor.jpg" alt="Mahesh Ushir, founder of Mic Masters Academy" class="founder-photo">
+        </div>
+        <div class="fade-left">
+          <h2 class="section-title left-align">More Than Public Speaking</h2>
+          <p class="lead">Mic Masters trains the complete communicator: someone who can debate, persuade, interview, lead, and inspire with clarity.</p>
+          <p>Led by Mahesh Ushir, a speaker with 200+ state and national level elocution wins, the curriculum is practical, high-energy, and built from real stage experience.</p>
+          <blockquote class="quote-panel">
+            "Every student has a voice worth hearing. My job is to help them find it."
+            <br><strong>- Mahesh Ushir, Founder</strong>
+          </blockquote>
+          <a href="about.html" class="btn btn-primary">Read Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-alt">
+      <div class="container">
+        <div class="text-center fade-up">
+          <h2 class="section-title">What Students Build</h2>
+        </div>
+        <div class="proof-grid">
+          <article class="card fade-up delay-100">
+            <div class="card-icon"><i class="fas fa-microphone-lines" aria-hidden="true"></i></div>
+            <h3 class="card-title">Stage Confidence</h3>
+            <p class="card-body">Systematic practice that reduces hesitation and makes speaking feel natural.</p>
+          </article>
+          <article class="card fade-up delay-200">
+            <div class="card-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
+            <h3 class="card-title">Stronger Expression</h3>
+            <p class="card-body">Clear structure, better vocabulary, and sharper delivery for speeches and conversations.</p>
+          </article>
+          <article class="card fade-up delay-300">
+            <div class="card-icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
+            <h3 class="card-title">Career Readiness</h3>
+            <p class="card-body">Interview, group discussion, and presentation skills students can use immediately.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding cta-section">
+      <div class="container fade-up">
+        <h2>Ready to Find Your Voice?</h2>
+        <p>Join the next Mic Masters batch or invite us to your institution.</p>
+        <a href="https://wa.me/919921362708" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+          <p>Find Your Voice. Command Every Room.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pune, Maharashtra, India</li>
+            <li><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/919921362708">+91 99213 62708</a></li>
+            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:maheshushir583@gmail.com">maheshushir583@gmail.com</a></li>
+            <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://instagram.com/micmasters_with_mahesh" target="_blank" rel="noopener">@micmasters_with_mahesh</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Mic Masters Academy of Communication. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919921362708" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with Mic Masters Academy on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <script src="js/main.js"></script>
+</body>
+</html>

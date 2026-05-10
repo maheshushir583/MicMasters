@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Mic Masters Academy</title>
+  <meta name="description" content="View moments from Mic Masters Academy speaking sessions, workshops, and student achievements.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-bottom: var(--space-xl);
+    }
+
+    .filter-btn {
+      min-height: 40px;
+      padding: 0.55rem 1rem;
+      border: 1px solid rgba(15, 30, 61, 0.3);
+      border-radius: var(--radius-full);
+      background: var(--color-light);
+      color: var(--color-primary);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--color-primary);
+      color: var(--color-light);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .gallery-item {
+      position: relative;
+      min-height: 280px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      background: var(--color-primary);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 1.2rem;
+      color: var(--color-light);
+      background: linear-gradient(transparent, rgba(8, 12, 24, 0.9));
+    }
+
+    .gallery-overlay h3 {
+      margin: 0;
+      color: var(--color-light);
+      font-size: 1.15rem;
+    }
+
+    .gallery-overlay p {
+      margin: 0.25rem 0 0;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .brand-tile {
+      display: grid;
+      place-items: center;
+      min-height: 280px;
+      padding: var(--space-lg);
+      background:
+        linear-gradient(135deg, rgba(15, 30, 61, 0.94), rgba(123, 29, 36, 0.9)),
+        var(--color-primary);
+    }
+
+    .brand-tile img {
+      width: min(220px, 70%);
+      height: auto;
+      min-height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-nav">
+      <a href="index.html" class="nav-brand" aria-label="Mic Masters Academy home">
+        <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+      </a>
+      <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Free Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container fade-up">
+      <h1>Visual Journey</h1>
+      <p>Moments from training, mentoring, competitions, and student growth.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-padding bg-cream">
+      <div class="container">
+        <div class="filter-container fade-up" aria-label="Gallery filters">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="sessions">Sessions</button>
+          <button class="filter-btn" type="button" data-filter="awards">Awards</button>
+          <button class="filter-btn" type="button" data-filter="workshops">Workshops</button>
+        </div>
+
+        <div class="gallery-grid fade-up delay-100">
+          <article class="gallery-item" data-gallery-category="sessions">
+            <img src="assets/images/mahesh_instructor.jpg" alt="Mic Masters coaching session">
+            <div class="gallery-overlay">
+              <h3>Founder-Led Coaching</h3>
+              <p>Practical training built from real stage experience.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item brand-tile" data-gallery-category="workshops">
+            <img src="assets/images/logo-clean.png" alt="Mic Masters Academy logo">
+            <div class="gallery-overlay">
+              <h3>Institution Workshops</h3>
+              <p>Communication sessions for schools and colleges.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item brand-tile" data-gallery-category="awards">
+            <img src="assets/images/logo-clean.png" alt="Mic Masters Academy logo mark">
+            <div class="gallery-overlay">
+              <h3>Speaking Achievements</h3>
+              <p>200+ elocution and debate awards behind the method.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+          <p>Find Your Voice. Command Every Room.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pune, Maharashtra, India</li>
+            <li><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/919921362708">+91 99213 62708</a></li>
+            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:maheshushir583@gmail.com">maheshushir583@gmail.com</a></li>
+            <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://instagram.com/micmasters_with_mahesh" target="_blank" rel="noopener">@micmasters_with_mahesh</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Mic Masters Academy of Communication. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919921362708" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with Mic Masters Academy on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* css/animations.css - Keyframes & Scroll Animations */
+
+/* Base fade setup for scroll animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Active states toggled by Intersection Observer */
+.fade-up.in-view,
+.fade-in.in-view,
+.fade-left.in-view,
+.fade-right.in-view {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Delays for staggered animations */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Keyframes */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(201, 160, 36, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(201, 160, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(201, 160, 36, 0); }
+}
+
+@keyframes slideDown {
+  from { top: -100px; opacity: 0; }
+  to { top: 0; opacity: 1; }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Micro-animations */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}

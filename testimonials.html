@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | Mic Masters Academy</title>
+  <meta name="description" content="Read student and institution feedback for Mic Masters Academy public speaking and communication training.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .testimonial-box {
+      position: relative;
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      background: var(--color-light);
+      box-shadow: var(--shadow-md);
+    }
+
+    .quote-icon {
+      color: rgba(201, 160, 36, 0.35);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .stars {
+      margin-bottom: 1rem;
+      color: var(--color-accent);
+    }
+
+    .testimonial-text {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+      font-style: italic;
+    }
+
+    .student-info {
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
+      margin-top: var(--space-lg);
+      padding-top: 1rem;
+      border-top: 1px solid rgba(15, 30, 61, 0.1);
+    }
+
+    .student-avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-light);
+      font-weight: 800;
+    }
+
+    .student-meta h3 {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+    }
+
+    .student-meta span {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 960px) {
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-nav">
+      <a href="index.html" class="nav-brand" aria-label="Mic Masters Academy home">
+        <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+      </a>
+      <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="testimonials.html" class="nav-link active">Testimonials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Free Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container fade-up">
+      <h1>Student Success Stories</h1>
+      <p>Feedback from learners and institutions who built stronger speaking confidence.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-padding bg-cream">
+      <div class="container">
+        <div class="text-center fade-up">
+          <h2 class="section-title">Reviews</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-box fade-up delay-100">
+            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+            <div class="stars" aria-label="5 star review">
+              <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+            <p class="testimonial-text">"Before Mic Masters, I could not speak in front of a mirror without freezing. The course changed my approach, and the feedback helped me prepare for my first college debate."</p>
+            <div class="student-info">
+              <div class="student-avatar">R</div>
+              <div class="student-meta">
+                <h3>Rahul M.</h3>
+                <span>Batch 2 - Online Course</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-box fade-up delay-200">
+            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+            <div class="stars" aria-label="5 star review">
+              <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+            <p class="testimonial-text">"The 5-day bootcamp in Pune was intense in the best way. We did not just sit and listen. We spoke, corrected mistakes, and became more comfortable on stage."</p>
+            <div class="student-info">
+              <div class="student-avatar">S</div>
+              <div class="student-meta">
+                <h3>Sneha J.</h3>
+                <span>Intensive Bootcamp</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-box fade-up delay-300">
+            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+            <div class="stars" aria-label="5 star review">
+              <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+            <p class="testimonial-text">"The workshop kept students engaged throughout. The tips on impromptu speaking and handling stage fear were practical and easy for them to apply."</p>
+            <div class="student-info">
+              <div class="student-avatar" style="background: var(--color-accent); color: var(--color-primary);"><i class="fas fa-school" aria-hidden="true"></i></div>
+              <div class="student-meta">
+                <h3>College Faculty</h3>
+                <span>Institution Workshop</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo-clean.png" alt="Mic Masters Academy" class="nav-logo">
+          <p>Find Your Voice. Command Every Room.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pune, Maharashtra, India</li>
+            <li><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/919921362708">+91 99213 62708</a></li>
+            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:maheshushir583@gmail.com">maheshushir583@gmail.com</a></li>
+            <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://instagram.com/micmasters_with_mahesh" target="_blank" rel="noopener">@micmasters_with_mahesh</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Mic Masters Academy of Communication. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919921362708" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with Mic Masters Academy on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <script src="js/main.js"></script>
+</body>
+</html>
